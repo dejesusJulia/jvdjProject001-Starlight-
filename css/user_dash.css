@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    src: url(/fonts/Raleway-Regular.ttf);
+    font-family: Raleway;
+}@font-face{
+    src: url(/fonts/Roboto-Condensed.ttf);
+    font-family: Roboto;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Roboto;
+}
+#showcase{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 350px;
+    background-image: url(../images/showcase1.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* .burger-menu{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    cursor: pointer;
+} */
+.showcase-text{
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+.showcase-text > h1{
+    font-size: 6vw;
+    font-family: Raleway !important;
+}
+.showcase-text > h3{
+    font-size: 1.5vw;
+}
+#navbar{
+    color: #f4f4f4 !important;
+    background-color: #111111;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    list-style: none;
+    padding: 10px;
+    margin: 0 50px;
+    line-height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-link{
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+/* .nav-item .active{
+    border-bottom: 5px solid #FFC300;
+} */
+.active{
+    border-bottom: 5px solid #FFC300;
+}
+
+#profile-text{
+    -webkit-transition:all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.profile-options{
+    display: none;
+    -webkit-transition:all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    background-color: #1c1c1c;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.profile-options-link{
+    text-decoration: none;
+    color: #f4f4f4;
+    margin: 0 30px;
+    padding: 20px;
+    font-size: 1.25em;
+    transition: all 0.3s ease;
+}
+
+
+/* MAIN CONTENT*/
+.container{
+    transition: all 0.3s ease-in;
+}
+#dashCont{
+    display: flex;
+    margin: auto;
+    width: 70%; 
+    justify-content: center;
+    position: relative;
+
+}
+#summaryCont, #editProf{
+    display: none;
+    margin: auto;
+    width: 70%; 
+    justify-content: center;
+    position: relative;
+}
+#main-section{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    margin-top: 10px;
+}
+#main-section > h2{
+    padding: 15px 10px 5px 10px;
+}
+.ms-box{
+    padding: 15px;
+    margin-bottom: 20px;
+    /* height: 700px; */
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    position: relative;
+}
+.ts-item-box{
+    background-color: #f3f3f3;
+    height: 150px;
+    border-left: 5px solid red;
+    margin: 10px 0;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 3px 0px 3px #f4f4f4;
+}
+.ts-price{
+    padding: 5px;
+    margin: 3px;
+    font-size: 2.5em;
+    flex: 3;
+    width: 30%;
+    font-family: Raleway !important;
+}
+.ts-item-box-sub, .us-item-box-sub{
+    padding: 5px;
+    margin: 3px;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+.ts-desc{
+    font-size: 1.75em;
+}
+.ts-date{
+    font-family: Raleway;
+    font-size: 1em;
+}
+.us-item-box{
+    background-color: #f3f3f3;
+    height: 100px;
+    border-left: 5px solid orange;
+    margin: 10px 0;
+    display: flex;
+    padding: 20px;
+}
+.us-price{
+    padding: 5px;
+    margin: 3px;
+    font-size: 1.75em;
+    flex: 3;
+    width: 30%;
+    font-family: Raleway !important;
+}
+.us-desc{
+    font-size: 1.25em;
+}
+.us-date{
+    font-family: Raleway;
+    font-size: 0.85em;
+}
+#overdue-section{
+    flex: 2;
+    justify-content: flex-end;
+    margin-top: 35px;
+    background-color: #f3f3f3;
+    width: 30%;
+    height: 450px;
+}
+#overdue-section > h3{
+    background-color: #FFC300 !important;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+.overdue-list{
+    padding: 20px;
+}
+.overdue-list-item{
+    list-style: none;
+    padding: 5px;
+}
+#ts-unavailable > h2, #us-unavailable > h2, #os-unavailable > h2{
+    text-align: center;
+}
+
+.table-sum{
+    margin: 20px 0;
+    padding: 10px;
+}
+.table-sum th{
+    font-size: 1.35em;
+    background-color: #FFC300;
+    color: #111111;
+    padding: 5px;
+}
+.table-sum tr:nth-child(even){
+    font-size: 1.20em;
+    background-color: #ccc;
+    color: #111111;
+    text-transform: uppercase;
+}
+.table-sum tr:nth-child(odd){
+    font-size: 1.20em;
+    background-color: #f4f4f4;
+    color: #111111;
+    text-transform: uppercase;
+}
+.table-sum td{
+    padding: 15px;
+}
+#editProf{
+    margin-top: 20px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+}
+#editProf > form > h3{
+    color: #FFC300;
+    font-family: Raleway;
+    font-size: 1.5em;
+    padding: 3px;
+}
+#editOne, #editTwo{
+    padding: 5px;
+    background-color: #1c1c1c;
+    border-radius: 3px;
+    margin: 5px auto;
+    width: 50%;
+}
+#editTwo{
+    height: 165px;
+}
+
+.form-field, .form-field-check{
+    display: flex;
+    margin: 5px 0;
+    padding: 2px;
+}
+.form-field >label{
+    flex: 3;
+    width: 100%;
+    font-size: 1.20em;
+    color: #f4f4f4;
+    font-family: Raleway;
+}
+.form-field > input[type=text], .form-field > input[type=password], .form-field > input[type=date], .form-field > input[type=email], .form-field > select{
+    flex: 6;
+    width: 100%;
+    padding: 3px;
+    font-family: Roboto;
+    font-size: 1em;
+}  
+.form-field-check label{
+    flex: 9;
+    width: 100%;
+    font-size: 1.25em;
+    color: #f4f4f4;
+    margin: 0 2px;
+}
+.form-field-check input[type=checkbox]{
+    flex: 1;
+    width: 100%;
+    position: relative;
+    top: 5px;
+} 
+.form-field >button{
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    background-color: #FFC300;
+    border: 1px solid #FFC300;
+    color: #1c1c1c;
+    transition: all 0.3s ease-in;
+}
+.form-field >button:hover{
+    background-color: #1c1c1c;
+    color: #FFC300;
+    cursor: pointer;
+}
+
+#footer{
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #111111;
+    color: #f4f4f4;
+    font-family: Raleway;
+}
+#footer-wrap{
+    display: flex;
+}
+#logo{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 3px;
+    width: 100%;
+}
+.star{
+    font-size: 3.75em;
+    /* font-weight: bold; */
+}
+#logo>p>small{
+    font-size: 1.5em;
+}
+#footer-nav{
+    flex: 7;
+    width: 100%;
+}
+.footer-nav-list{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav-item{
+    list-style: none;
+    margin: 30px 50px;
+}
+.footer-nav-link{
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.5em;
+}
+

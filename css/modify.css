@@ -1,0 +1,136 @@
+@font-face{
+    src: url(/fonts/Roboto-Condensed.ttf);
+    font-family: Roboto;
+}
+.modal{
+    /* display: none; */
+    position: absolute;
+    z-index: 6000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modalDelete .modal-content{
+    margin: 15% auto;
+}
+.modal-content{
+    background-color: #f4f4f4;
+    width: 55%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, .17) ;
+    font-family: Roboto;
+    border-radius: 5px;
+}
+.panel-head{
+    background-color: #d8a90f;
+    width: 100%;
+    text-align: center;
+    color: #1c1c1c;
+}
+.panel-head h1{
+    margin: none;
+    padding: 25px;
+    font-size: 4vh;
+}
+.modal-text{
+    padding: 20px;
+}
+.modal-text p{
+    font-size: 4.5vh;
+    text-align: center;
+    line-height: 50px;
+
+}
+.panel-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2.5vh;
+    line-height: 40px;
+}
+.confirm{
+    margin: 0 10px;
+    text-decoration: none;
+    background-color: green;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+.cancel{
+    margin: 0 10px;
+    text-decoration: none;
+    background-color: red;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+.confirm, .cancel{
+    padding: 5px;
+}
+.confirm:hover{
+    background-color: rgba(34, 139, 34, 0.8);
+}
+.cancel:hover{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+/*modal add*/
+#modalAdd .modal-content, #modalEdit .modal-content, #modalAddLog .modal-content, #modalEditLog .modal-content{
+    margin: 10% auto;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+.formAddFee{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    font-size: 3vh;
+
+}
+.form-group-3{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.input{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.input input{
+    width: 100%;
+}
+.modalinput{
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 2vh;
+}
+.checksave{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.upload-btn{
+    background-color: #ffc300;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    font-size: 2.5vh;
+    line-height: 30px;
+    cursor: pointer;
+}
+.upload-btn:hover{
+    background-color: rgba(255,195,0, 0.8);
+}

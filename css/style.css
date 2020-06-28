@@ -1,0 +1,342 @@
+*, *::before, *::after{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: inherit;
+}
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+@font-face{
+    src: url(/fonts/Raleway-Regular.ttf);
+    font-family: Raleway;
+}@font-face{
+    src: url(/fonts/Roboto-Condensed.ttf);
+    font-family: Roboto;
+}
+
+/*GENERAL CONTAINER*/
+.container{ 
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    font-family: Roboto;
+    padding: 25px;
+}
+/*END OF GENERAL CONTAINER*/
+
+/*bckgd-slideshow*/
+.main-page-wrap{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}.sub-page-wrap{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+}@keyframes animate{
+    0%, 100%{
+        background-image: url(../images/img-slider-001.jpg);
+    }
+    25%{
+        background-image: url(../images/img-slider-002.jpg);
+    }
+    50%{
+        background-image: url(../images/img-slider-003.jpg);
+    }
+    75%{
+        background-image: url(../images/img-slider-004.jpg);
+    }
+}/*END OF SLIDESHOW*/
+
+/*LOGIN PAGE STYLE=media query*/
+@media(max-width: 425px){
+  .start-wrap{
+    display: inline;
+  }
+  .description{
+    display: none;
+  }
+ .login{
+    position: relative;
+    top: 50px;
+  }
+}
+
+@media(min-width: 426px){
+  .description p{
+    line-height: 25px;
+  }
+} 
+@media(min-width: 768px){
+  .start-wrap{
+    display: flex;
+    justify-content: space-around; 
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}.description{
+    font-size: 5vh;
+    line-height: 30px;
+}.description p{
+    line-height: 40px;
+}.start-heading{
+    padding: 10px;
+}.login{
+  font-size: 3.5vh;
+  }
+}/*end of media query*/
+
+/*SETTINGS FOR FLEXBOX*/
+.description{
+    text-align: center;
+    color: #f4f4f4;
+    flex: 3.5;
+    padding: 5px;
+    line-height: 40px;
+}.login{
+    position: relative;
+    z-index: 3;
+    flex: 2;
+    border-radius: 15px;
+    background-color: #FFC300;
+    opacity: .8;
+    padding: 2px;  
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}.pic-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.start-form{
+    margin: 0;
+    padding: 10px;
+}.start-form-group{
+  padding-bottom: 10px;
+}.start-form label{
+  display: block;
+}.login .start-form input[type="text"]{
+    padding: 8px;
+    width: 96%;
+    border-radius: 10px;
+    border: 2px solid #FFC300;
+}
+/*END OF FLEXBOX SETTINGS*/
+
+/*Password*/
+.pass{
+    display: flex;
+}
+.start-form input[type="password"]{
+    padding: 8px;
+    width: 85%;
+    border-radius: 10px;
+    border: 2px solid #FFC300;
+}
+#showpass{
+    padding: 3px;
+    color: #000000;
+}
+#showpassUser, #showpassAdmin{
+    padding: 3px;
+    color: #FFC300;
+}
+#showpass:hover, #showpassUser:hover, #showpassAdmin:hover{
+    cursor: pointer;
+}
+
+/*Register now*/
+.reg-link a{
+    text-decoration: none;
+    color: #333;
+}
+.reg-link a:hover{
+    text-decoration: underline;
+}/*end of registration settings*/
+
+/*LOGIN BUTTON*/
+.btn{
+    background-color: #000000;
+    color: #FFC300;
+    font-weight: bold;
+    padding: 2px;
+    border: #f4f4f4;
+    border-radius: 15px;
+    width: 95.5%;
+}.btn:hover{
+    background-color: #333;
+    color: #FFC300;
+}/*end of login button settings*/
+
+
+
+/*register page*/
+#acc-choice{
+    background-image:url(../images/showcase1.png);
+    width: 100%;
+    height: 100vh;
+    font-family: Roboto;
+}
+#acc-choice-text{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 35px;
+}
+#acc-choice-text > h1{
+   font-size: 6vh;
+}
+#acc-choice-flex{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 7.5vh;
+}
+#acc-choice-flex li{
+    display: flex;
+    position: relative;
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 25px 10px 25px;
+    border-radius: 25px;
+}
+#acc-choice-flex li:hover{
+    color: #1c1c1c;
+    background-color: #ccc;
+}
+#acc-choice-flex li a:hover{
+    color: #1c1c1c;
+}
+.reg-text{
+    padding: 10px;
+    text-align: center;
+    font-size: 3.5vh;
+    color: #d8a90f;
+}
+.reg-container{
+    width: 70%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #333;
+    margin: 40px auto;
+    background-origin: padding-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.reg-container nav{
+    display: flex;
+}
+
+.reg-container nav > div{
+    flex: 1;
+    padding: 20px;
+    font-size: 8vh;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    color: #ccc;
+}
+.reg-container nav > div.selected{
+    border-bottom: 2px solid #d8a90f;
+}
+.reg-container > div{
+    padding: 10px;
+}
+.form-group-3, .form-group-2{
+    display: flex;
+}
+
+.form-categ{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.reg-container > div input, .reg-container > div select{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.form-categ .passflex, .form-categ input[type="date"]{
+    line-height: 20px;
+}
+#user, #admin{
+    font-size: 2.5vh;
+    padding: 3px;
+}
+#user label, #admin label{
+    color: #f4f4f4;
+}
+#user, #admin{
+    display: none;
+}
+#user.show, #admin.show{
+    display: block;
+}
+
+.reg-btn{
+    color: #1c1c1c;
+    font-weight: bold;
+    background-color: #FFC300;
+    cursor: pointer;
+}
+.reg-btn:focus{
+    opacity: 0.9;
+}
+@media(max-width: 768px){
+    
+}
+@media (min-width:768px){
+    
+}
+.passflex{
+    display: flex;
+}  
+@media(max-width: 375px){
+    #acc-choice-text h1{
+      font-size: 7.5vh;
+    }
+    #acc-choice-flex{
+      display: flex;
+      flex-direction: column;
+    }
+    #acc-choice-flex li{
+      font-size: 5vh;
+    }
+    
+}
+  
+@media(min-width:376px){
+    
+}
+@media(max-width: 500px){
+    
+}
+@media(min-width: 768px){
+    
+}
+@media(max-width: 768px){
+    
+}
+
+/*END OF REGISTER PAGE*/
+
+
+
